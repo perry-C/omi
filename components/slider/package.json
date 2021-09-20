@@ -1,6 +1,6 @@
 {
   "name": "@perry-c/slider",
-  "version": "0.0.21",
+  "version": "0.0.51",
   "main": "dist/index.es.js",
   "exports": {
     ".": "./dist/index.es.js"

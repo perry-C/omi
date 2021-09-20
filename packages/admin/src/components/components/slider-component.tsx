@@ -1,11 +1,10 @@
 import { WeElement, h, tag } from 'omi'
 import { tw, sheet } from 'omi-twind'
 import '@omiu/input'
-import '@omiu/slider'
+import '@perry-c/slider'
 import '../docs/admin-docs'
 import './code-demo'
 import './code-demo/container'
-
 interface Props {}
 
 const tagName = 'slider-component'
@@ -117,7 +116,7 @@ export default class extends WeElement<Props> {
               max="100"
               value="20"
               slot="demo"
-              class={tw`p-5`}
+              class={tw`p-5 `}
             ></o-slider>
             <o-slider
               min="0"
@@ -132,7 +131,7 @@ export default class extends WeElement<Props> {
           <code-demo title="垂直" describe="支持使滑块垂直" code={this.mdB}>
             <div
               slot="demo"
-              class={tw`h-96 grid grid-cols-2 grid-rows-1 justify-evenly items-center`}
+              class={tw`h-full grid grid-cols-2 grid-rows-1 justify-evenly items-center`}
             >
               <o-slider
                 min="0"
@@ -157,7 +156,7 @@ export default class extends WeElement<Props> {
           >
             <div
               slot="demo"
-              class={tw`grid flex-col justify-center items-center m-5 `}
+              class={tw`grid flex-col justify-center items-center m-10 `}
             >
               <div>
                 <o-slider
@@ -165,12 +164,12 @@ export default class extends WeElement<Props> {
                   max="100"
                   value={this.valueInput}
                   oninput={this.handleInput}
-                  class={tw`m-5 `}
+                  class={tw`m-5`}
                 ></o-slider>
                 <o-input
                   value={this.valueInput}
                   oninput={this.handleInput}
-                  class={tw`m-5 relative`}
+                  class={tw`m-5`}
                 ></o-input>
               </div>
               <div>

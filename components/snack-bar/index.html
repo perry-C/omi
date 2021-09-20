@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omiu</title>
+    <script type="module" src="/src/index.tsx"></script>
+  </head>
+
+  <body>
+    <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
+
+    <script>
+      window.onload = function () {
+        //add more test cases \|/
+        const sbList = ['sb1', 'sb2', 'sb3', 'sb4', 'sb5', 'sb6']
+        sbList.forEach((el, index) => {
+          const sb = document.querySelector(`#${el}`)
+          const b = document
+            .querySelector('body')
+            .appendChild(document.createElement('button'))
+          b.innerHTML = el
+          b.addEventListener('click', () => {
+            sb.setAttribute('open', true)
+          })
+          b.style.padding = '20px'
+          b.style.margin = '20px'
+        })
+      }
+    </script>
+    <o-snackbar
+      id="sb1"
+      anchor_origin="{horizontal: 'left', vertical: 'top'}"
+      message="sample snackbar text"
+      severity="success"
+      auto_hide_duration="6000"
+    ></o-snackbar>
+    <o-snackbar
+      id="sb2"
+      anchor_origin="{horizontal: 'center', vertical: 'top'}"
+      message="sample snackbar text"
+      severity="warning"
+    ></o-snackbar>
+    <o-snackbar
+      id="sb3"
+      anchor_origin="{horizontal: 'right', vertical: 'top'}"
+      message="sample snackbar text"
+      severity="danger"
+    ></o-snackbar>
+    <o-snackbar
+      id="sb4"
+      anchor_origin="{horizontal: 'left', vertical: 'bottom'}"
+      message="sample snackbar text"
+      severity="primary"
+    ></o-snackbar>
+    <o-snackbar
+      id="sb5"
+      anchor_origin="{horizontal: 'center', vertical: 'bottom'}"
+      message="sample snackbar text"
+      severity="info"
+    ></o-snackbar>
+    <o-snackbar
+      id="sb6"
+      anchor_origin="{horizontal: 'right', vertical: 'bottom'}"
+      message="sample snackbar text"
+      severity="info"
+    ></o-snackbar>
+  </body>
+</html>

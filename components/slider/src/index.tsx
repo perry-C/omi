@@ -126,12 +126,12 @@ export default class OSlider extends WeElement<Props> {
 
   applyTransform() {
     let host = this.shadowRoot?.host as HTMLElement
-    this.props.orient === 'vertical' &&
-      (host.style.transform = 'rotate(-90deg)')
-    this.props.reversed && (host.style.transform = 'rotate(180deg)')
-    this.props.reversed &&
-      this.props.orient === 'vertical' &&
-      (host.style.transform = 'rotate(-270deg)')
+    // this.props.orient === 'vertical' &&
+    //   (host.style.transform = 'rotate(-90deg)')
+    // this.props.reversed && (host.style.transform = 'rotate(180deg)')
+    // this.props.reversed &&
+    //   this.props.orient === 'vertical' &&
+    //   (host.style.transform = 'rotate(-270deg)')
   }
 
   checkInvalidInputs() {
@@ -253,7 +253,8 @@ export default class OSlider extends WeElement<Props> {
 
   render(props: any) {
     const cls = extractClass(props, 'slider-container', {
-      'is-vertical': props.orient === 'vertical',
+      'is-vertical': props.orient === 'vertical' && !props.reversed,
+      'is-vertical-reversed': props.orient === 'vertical' && props.reversed,
       'is-disabled': props.disabled,
       ['is-' + props.shape]: props.shape,
       ['is-' + props.size]: props.size,

@@ -59,6 +59,7 @@
     "@omiu/tooltip": "0.0.1",
     "@omiu/transition": "^0.0.14",
     "@omiu/tree": "^0.0.18",
+    "@perry-c/slider": "^0.0.51",
     "axios": "^0.21.1",
     "bytemd": "^1.10.13",
     "copy-to-clipboard": "^3.3.1",

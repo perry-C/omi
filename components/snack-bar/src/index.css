@@ -1,0 +1,189 @@
+#o-snackbar {
+  display: none;
+  position: fixed;
+  min-width: 200px;
+  /* Set a default minimum width */
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 4px;
+  /* Rounded borders */
+  font-size: 0.875rem;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  padding: 6px;
+  /* Padding */
+  z-index: 1;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#o-snackbar.show-bottom {
+  display: flex;
+  /* Show the snackbar */
+  animation: fadeinBottom 0.5s;
+}
+#o-snackbar.show-top {
+  display: flex;
+  /* Show the snackbar */
+  animation: fadeinTop 0.5s;
+}
+#o-snackbar.hide-bottom {
+  animation: fadeoutBottom 0.5s;
+}
+#o-snackbar.hide-top {
+  animation: fadeoutTop 0.5s;
+}
+#o-snackbar.anchor-left {
+  left: 30px;
+}
+#o-snackbar.anchor-center {
+  left: 50%;
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+}
+#o-snackbar.anchor-right {
+  right: 30px;
+}
+#o-snackbar.anchor-bottom {
+  bottom: 30px;
+}
+#o-snackbar.anchor-top {
+  top: 30px;
+}
+#o-snackbar.o-snackbar-primary {
+  color: #fff;
+  background-color: var(--o-primary, #07c160);
+  border-color: var(--o-primary, #07c160);
+}
+#o-snackbar.o-snackbar-success {
+  color: #fff;
+  background-color: var(--o-success, #07c160);
+  border-color: var(--o-success, #07c160);
+}
+#o-snackbar.o-snackbar-warning {
+  color: #fff;
+  background-color: var(--o-warning, #f2711c);
+  border-color: var(--o-warning, #f2711c);
+}
+#o-snackbar.o-snackbar-danger {
+  color: #fff;
+  background-color: var(--o-danger, #fa5151);
+  border-color: var(--o-danger, #fa5151);
+}
+#o-snackbar.o-snackbar-info {
+  color: #fff;
+  background-color: var(--o-info, #42b8dd);
+  border-color: var(--o-info, #42b8dd);
+}
+
+#o-snackbar #bar-text {
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  color: #ffffff;
+}
+
+#o-snackbar #bar-svg {
+  margin: 8px;
+}
+
+#o-snackbar #bar-close {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: transparent;
+  border-radius: 50%;
+  color: #ffffff;
+  pointer-events: auto;
+  transition: all 0.75s;
+  margin: 8px;
+}
+#o-snackbar #bar-close:hover {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+#o-snackbar #bar-close:active {
+  background-color: black;
+}
+
+@keyframes fadeinBottom {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeinTop {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadeoutBottom {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
+@keyframes fadeoutTop {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeinBottom {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinTop {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 30px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeoutBottom {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeoutTop {
+  from {
+    top: 30px;
+    opacity: 1;
+  }
+  to {
+    top: 0px;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

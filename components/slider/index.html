@@ -10,13 +10,13 @@
 
   <body>
     <div id="root">
-      <a
+      <!-- <a
         href="https://github.com/Tencent/omi"
         target="_blank"
         style="position: fixed; right: 0; top: 0; z-index: 3"
       >
         <img src="//alloyteam.github.io/github.png" alt="" />
-      </a>
+      </a> -->
       <script src="https://tencent.github.io/omi/packages/omi/dist/omi.js"></script>
       <script src="https://unpkg.com/@omiu/color-picker"></script>
       <script>
@@ -36,7 +36,7 @@
         width="300px"
       >
       </o-color-picker> -->
-      <div style="text-align: center">basic slider</div>
+      <!-- <div style="text-align: center">basic slider</div>
       <o-slider min="0" max="100" value="20" id="single-range-demo"></o-slider>
       <div style="text-align: center">reversed slider</div>
       <o-slider
@@ -133,7 +133,7 @@
         disabled
         id="disable-double-range-demo"
       ></o-slider>
-      <div style="position: absolute">vertical single slider</div>
+      <div style="position: absolute">vertical single slider</div> -->
       <div style="position: absolute; left: 175px">vertical double slider</div>
       <o-slider
         min="0"
@@ -141,14 +141,16 @@
         value="100"
         orient="vertical"
         id="vertical-demo"
-        style="
-          position: relative;
-          margin-top: 200px;
-          left: -150px;
-          width: 400px;
-        "
       ></o-slider>
-      <o-slider
+      <!-- <o-slider
+        min="0"
+        max="100"
+        value="100"
+        reversed
+        orient="vertical"
+        id="reversed-vertical-demo"
+      ></o-slider> -->
+      <!-- <o-slider
         min="0"
         max="100"
         range="double"
@@ -156,8 +158,7 @@
         value="20"
         second_value="70"
         id="vertical-double-demo"
-        style="position: relative; margin-top: -50px; width: 400px"
-      ></o-slider>
+      ></o-slider> -->
     </div>
   </body>
 </html>

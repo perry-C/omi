@@ -38,8 +38,8 @@ export const getContribution = () => {
     href: '#/docs/contribution',
     md:
       i18next.language === 'zh'
-        ? import(`./zh/Contribution.md?raw`)
-        : import(`./en/Contribution.md?raw`),
+        ? import(`./zh/contribution.md?raw`)
+        : import(`./en/contribution.md?raw`),
     // vite 目前不支持
     // md: import(`./${locale}/theme.md?raw`),
     id: genId()
